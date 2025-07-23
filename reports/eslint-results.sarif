@@ -17,6 +17,16 @@
               "shortDescription": {
                 "text": "Detects \"eval(variable)\" which can allow an attacker to run arbitrary code inside your process."
               }
+            },
+            {
+              "id": "security-node/detect-eval-with-expr",
+              "helpUri": "https://github.com/gkouziik/eslint-plugin-security-node/blob/master/docs/rules/detect-eval-with-expr.md",
+              "properties": {
+                "category": "Possible Errors"
+              },
+              "shortDescription": {
+                "text": "detect eval with string concatenation"
+              }
             }
           ],
           "version": "9.31.0"
@@ -53,6 +63,30 @@
           ],
           "ruleId": "security/detect-eval-with-expression",
           "ruleIndex": 0
+        },
+        {
+          "level": "warning",
+          "message": {
+            "text": "detect eval() with non Literal argument"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/andre/Lab08-requiredfiles/test.js",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 2,
+                  "startColumn": 6,
+                  "endLine": 2,
+                  "endColumn": 11
+                }
+              }
+            }
+          ],
+          "ruleId": "security-node/detect-eval-with-expr",
+          "ruleIndex": 1
         }
       ]
     }
